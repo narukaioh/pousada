@@ -1,2 +1,2 @@
 # pousada
-Skin para pousada da praia de pombinhas 
+Template Joomla para o site da Pousada Praia de Bombinhas
