@@ -23,15 +23,16 @@ $option         = $jinput->get('option', '', 'cmd');
 
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/assets/css/font-awesome.min.css', $type = 'text/css', $media = 'screen,projection');
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/assets/css/main.css', $type = 'text/css', $media = 'screen,projection');
+$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/assets/css/style.css', $type = 'text/css', $media = 'screen,projection');
 
 JHtml::_('bootstrap.framework');
 
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript', $async = false);
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.dropotron.min.js', 'text/javascript', $async = false);
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/skel.min.js', 'text/javascript', $async = false);
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/skel-viewport.min.js', 'text/javascript', $async = false);
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/util.js', 'text/javascript', $async = false);
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/main.js', 'text/javascript', $async = false);
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.dropotron.min.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/skel.min.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/skel-viewport.min.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/util.js', 'text/javascript');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/main.js', 'text/javascript');
 
 $this->setGenerator(null);
 
@@ -67,11 +68,14 @@ $this->setGenerator(null);
 							<?php //var_dump($logo); die(); ?>
 						<!-- Nav -->
 							<nav id="nav">
+								<div class="logo"></div>
 								<jdoc:include type="modules" name="menu-principal" />
 							</nav>
 
 						<!-- Banner -->
 							<section id="banner">
+								<div class="screen"></div>
+								<jdoc:include type="modules" name="banner-principal" />
 								<!-- <header>
 									<h2>Howdy. This is Dopetrope.</h2>
 									<p>A responsive template by HTML5 UP</p>
@@ -131,6 +135,9 @@ $this->setGenerator(null);
 										<header class="major">
 											<h2>My Portfolio</h2>
 										</header>
+
+										<jdoc:include type="modules" name="ultimas-noticias" />
+
 										<div class="row">
 											<div class="4u 12u(mobile)">
 												<section class="box">

@@ -1882,7 +1882,7 @@
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 4.5em 0 4em 0;
+				padding: 20px 0 4em 0;
 			}
 
 			#main-wrapper {
@@ -1948,7 +1948,7 @@
 					}
 
 					#nav > ul > li.current > a {
-						background: #d52349;
+						background: #1c9453;
 						color: #fff !important;
 						font-weight: 700;
 					}
@@ -2004,8 +2004,8 @@
 
 			#banner {
 				position: relative;
-				padding: 8em 0;
-				margin: 4em 0 0 0;
+				/* padding: 8em 0; */
+				margin: 20px 0 0 0;
 			}
 
 				#banner header {
@@ -2125,7 +2125,7 @@
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 3em 0 3em 0;
+				padding: 20px 0 3em 0;
 			}
 
 			#main-wrapper {
@@ -2157,8 +2157,7 @@
 		/* Banner */
 
 			#banner {
-				padding: 6em 0;
-				margin: 3em 0 0 0;
+				margin: 20px 0 0 0;
 			}
 
 		/* Intro */
@@ -2517,7 +2516,6 @@
 
 			#banner {
 				margin: 2em 0 4em 0 !important;
-				padding: 6em 0;
 			}
 
 				#banner header {

@@ -1,0 +1,38 @@
+
+/* Estilo para o banner principal */
+
+.bannergroup {
+    overflow: hidden;
+    height: 444px;
+}
+
+.banner_slider {
+    width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+
+section#banner .screen {
+    height: 444px;
+    position: absolute;
+    width: 100%;
+    background: #000;
+    z-index: 10;
+    opacity: 0.3;
+    margin: 0 auto;
+}
+
+nav#nav .logo {
+    border: 1px solid #fff;
+    float: left;
+    margin-left: 10%;
+    width: 204px;
+    position: absolute;
+    top: 5px;
+    height: 104px;
+    z-index: 99;
+    border-radius: 0px 0px 10px 10px;
+    background: url('images/logo.png') no-repeat center #fff;
+    background-size: 190px 76px;
+    /* opacity: 0.9; */
+}
