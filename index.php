@@ -25,6 +25,7 @@ $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/assets/
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/assets/css/main.css', $type = 'text/css', $media = 'screen,projection');
 
 JHtml::_('bootstrap.framework');
+
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.min.js', 'text/javascript', $async = false);
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/jquery.dropotron.min.js', 'text/javascript', $async = false);
 $doc->addScript($this->baseurl . '/templates/' . $this->template . '/assets/js/skel.min.js', 'text/javascript', $async = false);
@@ -61,9 +62,9 @@ $this->setGenerator(null);
 				<div id="header-wrapper">
 					<div id="header">
 
-						<!-- Logo -->
-							<h1><a href="index.html">Pousada da Praia de Bombinhas</a></h1>
-
+						<!-- Logo 
+							<h1><a href="index.html">Pousada da Praia de Bombinhas</a></h1> -->
+							<?php //var_dump($logo); die(); ?>
 						<!-- Nav -->
 							<nav id="nav">
 								<jdoc:include type="modules" name="menu-principal" />
