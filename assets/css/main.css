@@ -1131,7 +1131,7 @@
 	}
 
 	a {
-		color: #d52349;
+		color: #d85a0e;
 		text-decoration: underline;
 	}
 
@@ -1304,7 +1304,7 @@
 		cursor: pointer;
 		border: 0;
 		border-radius: 5px;
-		background: #d52349;
+		background: #1c9453;
 		color: #fff !important;
 		font-weight: 700;
 		outline: 0;
@@ -1319,7 +1319,7 @@
 		input[type="reset"]:hover,
 		button:hover,
 		.button:hover {
-			background: #e53359;
+			background: #1066a5;
 		}
 
 		input[type="button"]:active,
@@ -1446,7 +1446,7 @@
 		position: absolute;
 		left: 0;
 		top: 1.3em;
-		background-color: #d52349;
+		background-color: #1c9453;
 		height: 3.5em;
 		text-align: center;
 		color: #fff;
@@ -1461,7 +1461,7 @@
 			position: absolute;
 			bottom: 0;
 			right: -1.2em;
-			border-left: solid 1.25em #d52349;
+			border-left: solid 1.25em #1c9453;
 			border-top: solid 1.8em transparent;
 			border-bottom: solid 1.8em transparent;
 		}
@@ -1611,7 +1611,7 @@
 		.icon.featured {
 			position: relative;
 			display: inline-block;
-			background-color: #d52349;
+			background-color: #1c9453;
 			width: 9em;
 			padding: 1.75em 0 0.75em 0;
 			border-top-left-radius: 5px;
@@ -1631,7 +1631,7 @@
 				position: absolute;
 				bottom: -1.95em;
 				left: 0;
-				border-top: solid 2em #d52349;
+				border-top: solid 2em #1c9453;
 				border-left: solid 4.5em transparent;
 				border-right: solid 4.5em transparent;
 			}
@@ -1882,7 +1882,7 @@
 		/* Wrappers */
 
 			#header-wrapper {
-				padding: 20px 0 4em 0;
+				padding: 20px 0 10px 0;
 			}
 
 			#main-wrapper {
@@ -1918,7 +1918,7 @@
 		/* Nav */
 
 			#nav > ul {
-				margin: 0;
+				margin-top: 25px;
 			}
 
 				#nav > ul > li {

@@ -55,8 +55,24 @@ $this->setGenerator(null);
 		<![endif]-->
 
 	</head>
+	<?php
 
-	<body class="homepage">
+		$classPage = strtolower($this->title);
+		switch ($classPage) {
+			case 'home':
+				$classPage = 'homepage';
+				break;
+			case 'contato':
+				$classPage = 'no-sidebar';
+			default:
+				$classPage = 'left-sidebar';
+				break;
+		}
+
+	 ?>
+	<body class="<?php echo $classPage ?>">
+
+		<?php $classPage = strtolower($this->title); ?>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -72,6 +88,7 @@ $this->setGenerator(null);
 								<jdoc:include type="modules" name="menu-principal" />
 							</nav>
 
+							<?php if($classPage == 'home'){ ?>
 						<!-- Banner -->
 							<section id="banner">
 								<div class="screen"></div>
@@ -120,152 +137,219 @@ $this->setGenerator(null);
 									</ul>
 								</footer>
 							</section>
-
+							<?php } ?>
 					</div>
 				</div>
 
-			<!-- Main -->
-				<div id="main-wrapper">
-					<div class="container">
-						<div class="row">
-							<div class="12u">
+			<?php 
+				switch ($classPage) {
+					case 'home': ?>
+						<!-- Main Home -->
+						<div id="main-wrapper">
+						<div class="container">
+							<div class="row">
+								<div class="12u">
 
-								<!-- Portfolio -->
-									<section>
-										<header class="major">
-											<h2>My Portfolio</h2>
-										</header>
+									<!-- Portfolio -->
+										<section>
+											<header class="major">
+												<h2>My Portfolio</h2>
+											</header>
 
-										<jdoc:include type="modules" name="ultimas-noticias" />
+											<jdoc:include type="modules" name="ultimas-noticias" />
 
-										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic02.jpg" alt="" /></a>
-													<header>
-														<h3>Ipsum feugiat et dolor</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
+											<div class="row">
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic02.jpg" alt="" /></a>
+														<header>
+															<h3>Ipsum feugiat et dolor</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic03.jpg" alt="" /></a>
+														<header>
+															<h3>Sed etiam lorem nulla</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic04.jpg" alt="" /></a>
+														<header>
+															<h3>Consequat et tempus</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
 											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic03.jpg" alt="" /></a>
-													<header>
-														<h3>Sed etiam lorem nulla</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
+											<div class="row">
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic05.jpg" alt="" /></a>
+														<header>
+															<h3>Blandit sed adipiscing</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic06.jpg" alt="" /></a>
+														<header>
+															<h3>Etiam nisl consequat</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
+												<div class="4u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic07.jpg" alt="" /></a>
+														<header>
+															<h3>Dolore nisl feugiat</h3>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+														<footer>
+															<a href="#" class="button alt">Find out more</a>
+														</footer>
+													</section>
+												</div>
 											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic04.jpg" alt="" /></a>
-													<header>
-														<h3>Consequat et tempus</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-										</div>
-										<div class="row">
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic05.jpg" alt="" /></a>
-													<header>
-														<h3>Blandit sed adipiscing</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic06.jpg" alt="" /></a>
-													<header>
-														<h3>Etiam nisl consequat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-											<div class="4u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic07.jpg" alt="" /></a>
-													<header>
-														<h3>Dolore nisl feugiat</h3>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-													<footer>
-														<a href="#" class="button alt">Find out more</a>
-													</footer>
-												</section>
-											</div>
-										</div>
-									</section>
+										</section>
 
+								</div>
+							</div>
+							<div class="row">
+								<div class="12u">
+
+									<!-- Blog -->
+										<section>
+											<header class="major">
+												<h2>The Blog</h2>
+											</header>
+											<div class="row">
+												<div class="6u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic08.jpg" alt="" /></a>
+														<header>
+															<h3>Magna tempus consequat lorem</h3>
+															<p>Posted 45 minutes ago</p>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+														<footer>
+															<ul class="actions">
+																<li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
+																<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
+															</ul>
+														</footer>
+													</section>
+												</div>
+												<div class="6u 12u(mobile)">
+													<section class="box">
+														<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic09.jpg" alt="" /></a>
+														<header>
+															<h3>Aptent veroeros et aliquam</h3>
+															<p>Posted 45 minutes ago</p>
+														</header>
+														<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
+														<footer>
+															<ul class="actions">
+																<li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
+																<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
+															</ul>
+														</footer>
+													</section>
+												</div>
+											</div>
+										</section>
+
+								</div>
 							</div>
 						</div>
-						<div class="row">
-							<div class="12u">
-
-								<!-- Blog -->
-									<section>
-										<header class="major">
-											<h2>The Blog</h2>
-										</header>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic08.jpg" alt="" /></a>
-													<header>
-														<h3>Magna tempus consequat lorem</h3>
-														<p>Posted 45 minutes ago</p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
-															<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-											<div class="6u 12u(mobile)">
-												<section class="box">
-													<a href="#" class="image featured"><img src="<?php echo $this->baseurl . '/templates/' . $this->template  ?>/images/pic09.jpg" alt="" /></a>
-													<header>
-														<h3>Aptent veroeros et aliquam</h3>
-														<p>Posted 45 minutes ago</p>
-													</header>
-													<p>Lorem ipsum dolor sit amet sit veroeros sed et blandit consequat sed veroeros lorem et blandit  adipiscing feugiat phasellus tempus hendrerit, tortor vitae mattis tempor, sapien sem feugiat sapien, id suscipit magna felis nec elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos lorem ipsum dolor sit amet.</p>
-													<footer>
-														<ul class="actions">
-															<li><a href="#" class="button icon fa-file-text">Continue Reading</a></li>
-															<li><a href="#" class="button alt icon fa-comment">33 comments</a></li>
-														</ul>
-													</footer>
-												</section>
-											</div>
-										</div>
-									</section>
-
+						</div>
+			<?php 		break;
+					case 'contato':
+			?>
+						<!-- Main Contato -->
+						<div id="main-wrapper">
+							<div class="container">
+							<!-- Content -->
+							<article class="box post">
+								<jdoc:include type="message" />
+								<jdoc:include type="component" />								
+							</article>
 							</div>
 						</div>
+			<?php 		break;
+					default: 
+			?>
+						<!-- Main Default Left -->
+						<div id="main-wrapper">
+							<div class="container">
+								<div class="row">
+									<div class="4u 12u(mobile)">
+
+									<!-- Sidebar -->
+									<section class="box">
+										<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
+										<header>
+											<h3>Sed etiam lorem nulla</h3>
+										</header>
+										<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
+										<footer>
+											<a href="#" class="button alt">Magna sed taciti</a>
+										</footer>
+									</section>
+									<section class="box">
+										<header>
+											<h3>Feugiat consequat</h3>
+										</header>
+										<p>Veroeros sed amet blandit consequat veroeros lorem blandit adipiscing et feugiat sed lorem consequat feugiat lorem dolore.</p>
+										<ul class="divided">
+											<li><a href="#">Sed et blandit consequat sed</a></li>
+											<li><a href="#">Hendrerit tortor vitae sapien dolore</a></li>
+											<li><a href="#">Sapien id suscipit magna sed felis</a></li>
+											<li><a href="#">Aptent taciti sociosqu ad litora</a></li>
+										</ul>
+										<footer>
+											<a href="#" class="button alt">Ipsum consequat</a>
+										</footer>
+									</section>
+								</div>
+							
+								<div class="8u 12u(mobile) important(mobile)">
+
+								<!-- Content -->
+									<article class="box post">
+										<jdoc:include type="message" />
+										<jdoc:include type="component" />									
+									</article>
+
+								</div>
+							</div>
 					</div>
-				</div>
+						</div>
+			<?php 		break;
+				} ?>
 
 			<!-- Footer -->
 				<div id="footer-wrapper">
@@ -402,6 +486,5 @@ $this->setGenerator(null);
 				</div>
 
 		</div>
-
 	</body>
 </html>
