@@ -62,6 +62,9 @@ $this->setGenerator(null);
 			case 'home':
 				$classPage = 'homepage';
 				break;
+			case 'fotos':
+				$classPage = 'no-sidebar';
+				break;
 			case 'contato':
 				$classPage = 'no-sidebar';
 			default:
@@ -285,6 +288,19 @@ $this->setGenerator(null);
 								</div>
 							</div>
 						</div>
+						</div>
+			<?php 		break;
+					case 'fotos':
+			?>
+						<!-- Main Contato -->
+						<div id="main-wrapper">
+							<div class="container">
+							<!-- Content -->
+							<article class="box post">
+								<jdoc:include type="message" />
+								<jdoc:include type="component" />								
+							</article>
+							</div>
 						</div>
 			<?php 		break;
 					case 'contato':
