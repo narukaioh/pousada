@@ -11,28 +11,98 @@
     margin: 0 auto !important;
 }
 
+nav#nav .logo {
 
-section#banner .screen {
-    height: 444px;
+    float: left;
+    margin-left: 10%;
+    width: 300px;
+    top: -27px;
+    z-index: 99;
+    background: url('images/logo.png') no-repeat center #fff;
+    background-size: 190px 76px;
+    position: relative;
+    display: inline-block;
+    padding: 1.75em 0 0.75em 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: default;
+}
+
+nav#nav .logo:after {
+    content: '';
     position: absolute;
+    bottom: -33px;
+    left: 0;
+    border-top: solid 33px #fff;
+    border-left: solid 150px transparent;
+    border-right: solid 150px transparent;
+}
+
+ul.nav.menu {
+    text-align: left;
+    text-indent: 15px;
+}
+
+.tooltip {
+    font-size: 0px;
+}
+
+.contact a.image.featured {
+    max-height: 200px;
+    overflow: hidden;
+}
+
+div#system-message-container {
+    float: left;
     width: 100%;
-    background: #000;
-    z-index: 10;
-    opacity: 0.3;
+}
+
+div#system-message {
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 10px;
+    background: #f2dede;
+    color: #3c0e0e;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.alert.alert-notice {
+    height: 22px;
+}
+
+.alert.alert-error {
+    width: 50%;
     margin: 0 auto;
 }
 
-nav#nav .logo {
-    border: 1px solid #fff;
+.alert.alert-error p {
+    margin-bottom: 5px;
+    background: #f2dede;
+    border-radius: 5px;
+    padding: 0 15px;
+    color: #3c0e0e;
+}
+
+a.close {
     float: left;
-    margin-left: 10%;
-    width: 204px;
-    position: absolute;
-    top: 5px;
-    height: 104px;
-    z-index: 99;
-    border-radius: 0px 0px 10px 10px;
-    background: url('images/logo.png') no-repeat center #fff;
-    background-size: 190px 76px;
-    /* opacity: 0.9; */
+    color: #3c0e0e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+    text-indent: 9px;
+}
+
+h4.alert-heading {
+    float: left;
+    line-height: 20px;
+    margin-left: 25px;
+    text-transform: uppercase;
+}
+
+.alert-message {
+    text-align: left;
+    line-height: 20px;
+    text-indent: 24px;
 }
