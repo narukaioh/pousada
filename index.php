@@ -76,6 +76,7 @@ $this->setGenerator(null);
 	<body class="<?php echo $classPage ?>">
 
 		<?php $classPage = strtolower($this->title); ?>
+
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -283,18 +284,7 @@ $this->setGenerator(null);
 								</div>
 						</div>
 			<?php 		break;
-					case 'fotos':
-			?>
-						<!-- Main Contato -->
-						<div class="container">
-							<!-- Content -->
-							<article class="box post">
-								<jdoc:include type="message" />
-								<jdoc:include type="component" />								
-							</article>
-						</div>
-			<?php 		break;
-					case 'quartos':
+					default:
 			?>
 						<!-- Main Contato -->
 						<div class="container">
@@ -310,7 +300,7 @@ $this->setGenerator(null);
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			<?php 		break;
-					default: 
+					case 'turismo': 
 			?>
 						<!-- Main Default Left -->
 						<div class="container">
@@ -318,14 +308,7 @@ $this->setGenerator(null);
 								<div class="4u 12u(mobile)">
 									<!-- Sidebar -->
 									<section class="box">
-										<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-										<header>
-											<h3>Sed etiam lorem nulla</h3>
-										</header>
-										<p>Lorem ipsum dolor sit amet sit veroeros sed amet blandit consequat veroeros lorem blandit  adipiscing et feugiat phasellus tempus dolore ipsum lorem dolore.</p>
-										<footer>
-											<a href="#" class="button alt">Magna sed taciti</a>
-										</footer>
+										<jdoc:include type="modules" name="left-1" />
 									</section>
 									<section class="box">
 										<header>
