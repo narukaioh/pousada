@@ -27,8 +27,10 @@ nav#nav .logo {
     border-top-right-radius: 5px;
     cursor: default;
 }
-
-nav#nav .logo:after {
+nav#nav div.logo { 
+    height: 75px;
+}
+nav#nav h1.logotipo:after {
     content: '';
     position: absolute;
     bottom: -33px;
@@ -105,4 +107,141 @@ h4.alert-heading {
     text-align: left;
     line-height: 20px;
     text-indent: 24px;
+}
+
+/* componente de reservas online */
+
+.hotel-content.row-fluid {
+    display: none !important;
+}
+
+.hotel-breadcrumb {
+    display: none !important;
+}
+.hotel_reservation {
+  padding: 0 !important;
+}
+
+.reservation-details-holder h3 {
+  background: #1c9453;
+  line-height: 32px;
+  color: #fff !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-shadow: none !important;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 5px 5px 0 0; 
+}
+
+.reservation-details {
+  background: none !important;
+  border-bottom: 1px solid #ccc;
+  font-size: 1em;
+  line-height: 20px;
+  margin-bottom: 20px;
+  margin-left: 0 !important;
+}
+.reservation-steps ul li.completed {
+  background: none !important;
+}
+
+.ui-hotel-button, a.ui-hotel-button {
+    border: none !important;
+    display: inline-block;
+    margin: 0 0 3px;
+    border-radius: 5px !important;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0.6em 1.2em 0.6em 1.2em !important;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+    outline: 0;
+    background: #1c9453 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.reservation-details.span12 {
+    padding: 30px 10px !important;
+}
+
+@media screen and (max-width: 6800px) {
+  .smallfont {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .smallfont {
+    font-size: 20px !important;
+  }
+}
+
+.trigger {
+  font-size: 17px !important;
+  opacity: 1 !important;
+}
+
+.styled-select.fixedWidth, .styled-select select {
+  height: 35px !important;
+}
+
+.availability-calendar .price, .availability-calendar .legend .available {
+  background: #1066a5;
+}
+
+.availability-calendar .legend .lock-arrival {
+  background-image: linear-gradient(bottom, #1066a5 50%, #555555 50%);
+  background-image: -o-linear-gradient(bottom, #1066a5 50%, #555555 50%);
+  background-image: -moz-linear-gradient(bottom, #1066a5 50%, #555555 50%);
+  background-image: -webkit-linear-gradient(bottom, #1066a5 50%, #555555 50%);
+  background-image: -ms-linear-gradient(bottom, #1066a5 50%, #555555 50%);
+}
+
+.availability-calendar .legend .lock-departure {
+  background-image: linear-gradient(bottom, #555555 50%, #1066a5 50%);
+  background-image: -o-linear-gradient(bottom, #555555 50%, #1066a5 50%);
+  background-image: -moz-linear-gradient(bottom, #555555 50%, #1066a5 50%);
+  background-image: -webkit-linear-gradient(bottom, #555555 50%, #1066a5 50%);
+  background-image: -ms-linear-gradient(bottom, #555555 50%, #1066a5 50%);
+}
+
+.availability-calendar .legend {
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.table_info .tr_cnt td {
+  font-size: 20px;
+}
+
+.room_main_description p {
+    font-size: 18px;
+}
+
+.trigger a, .trigger a:visited {
+  text-decoration: none;
+}
+
+.tabs {margin-bottom: 20px;float: left;width: 100%;}
+.reservation-steps ul li.completed {
+  background: #fbfbfb !important;
+}
+.reservation-steps ul li.selected {
+  background: #1c9453 !important;
+}
+
+.reservation-steps ul li a {
+    color: #fff !important;
+}
+
+.reservation-steps ul li {
+  background: #1066a5 !important;
+}
+
+.reservation-steps ul li.completed a {
+  color: #666 !important;
+  font-weight: bold;
 }
